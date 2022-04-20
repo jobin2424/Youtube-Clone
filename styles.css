@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+
+    padding-top: 79px;
+    padding-left: 26px;
+    padding-right: 24px;
+
+    background-color: #F0F0F0;
+}
+p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container {
+    width: 100%;
+    display: 1fr 1fr;
+}
+.thumbnail {
+    width: 100%;
+}
+.thumbnail-row {
+    position: relative;
+}
+.channel{
+    width: 42px;
+    border-radius: 40px;
+    margin-left: 5px;
+    margin-top: 4px;
+}
+.caption {
+    font-weight: 500;
+    color: #030303;
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 8px;;
+    width: 230px;
+}
+.author {
+    font-size: 13px;
+    margin-bottom: 2px;
+    margin-top: 0px;
+    color: #606060;
+}
+.stats {
+    font-size: 13px;
+    margin-top: 2px;
+    color: #606060;
+}
+.verified {
+    height: 12px;
+}
+.thumbnail-position-1 {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 3px 4px;
+    border-radius: 2px;
+
+    
+}
+.container2 {
+    display: grid;
+    grid-template-columns: 58px 1fr;
+}
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-left: 70px;
+}
+
+@media (max-width: 750px) {
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (mid-width: 751px) and (max-width:999) {
+    .content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (min-width: 1000px) {
+    .content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    background-color: white;
+    height: 55px;
+    border-bottom: solid;
+    border-bottom-color: rgb(230, 221, 221);
+    margin-bottom: 15px;
+    z-index: 100
+    
+}
+.hamburger {
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 15px;
+}
+.youtube-logo {
+    height: 20px;
+    margin-left: 9px;
+}
+.left-section {
+    display: flex;
+    align-items: center;
+}
+.middle-section {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin-left: 45px;
+    margin-right: 15px;
+    max-width: 520px;
+}
+.search {
+    height: 35px;
+    flex: 1;
+    width: 0;
+    border-color: #F0F0F0;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-width: 1px;
+    padding-left: 10px;
+    font-size: 16px;
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
+}
+.search::placeholder {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+.search-button{
+    height: 39px;
+    width: 60px;
+    background-color: #F0F0F0;
+    border-color: rgb(192, 192, 192);
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+}
+.search-button,
+.voice-search-button,
+.upload-container,
+.youtube-apps-container,
+.notifications-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-container .tooltip,
+.youtube-apps-container .tooltip, 
+.notifications-container .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-container:hover .tooltip, 
+.youtube-apps-container:hover .tooltip,
+.notifications-container:hover .tooltip {
+    opacity: 1;
+    
+}
+.voice-search {
+    height: 27px;
+    border-radius: 20px;
+}
+.voice-search-button {
+    border-radius: 20px;
+    margin-left: 5px;
+    border: none;
+    background-color: rgb(245, 245, 245);
+    position: relative;
+}
+.search-icon{
+    height: 23px;
+}
+.right-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 200px;
+    margin-right: 28px;
+}
+.upload {
+    height: 24px;
+
+}
+.youtube-apps {
+    height: 24px;
+    
+}
+.notifications {
+    height: 24px;
+    
+}
+.profile-pic {
+    height: 31px;
+    border-radius: 19px;
+    border-color: rgb(0, 159, 252);
+    border-width: 1px;
+    border: solid;
+}
+.hamburger, .thumbnail, .container2, .sidebar-link, .youtube-logo, .voice-search, .search-button, .search-icon, .upload, .youtube-apps, .notifications, .profile-pic:hover {
+    cursor: pointer;
+}
+.side-bar {
+    position: fixed;
+    top: 55px;
+    bottom: 0;
+    left: 0;
+    width: 72px;
+   font-size: 10px;
+   background-color: white;
+   z-index: 200;
+   padding-top: 5px;
+}
+.sidebar-link {
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+.sidebar-link:hover {
+    background-color: rgb(240, 238, 238);
+}
+.sidebar-link div {
+    font-size: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 8px;
+}
+.home-icon {
+    height: 24px;
+}
+.explore-icon {
+    height: 24px;
+}
+.shorts-icon {
+    height: 30px;
+}
+.subscriptions-icon {
+    height: 30px;
+}
+.library-icon {
+    height: 30px;
+}
